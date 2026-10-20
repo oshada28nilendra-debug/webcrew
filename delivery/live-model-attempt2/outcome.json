@@ -1,0 +1,44 @@
+{
+  "attempt": "live-model-attempt2",
+  "status": "incomplete",
+  "reason": "Fresh evidence or semantic review did not satisfy the task",
+  "steps": 3,
+  "calls": 3,
+  "usage": {
+    "prompt_tokens": 2460,
+    "completion_tokens": 38
+  },
+  "responses": [
+    {
+      "type": "model_response",
+      "role": "planner",
+      "response": {
+        "action": "visit",
+        "link": "l0"
+      },
+      "timestamp": "2026-10-20T03:41:33.432273+00:00"
+    },
+    {
+      "type": "model_response",
+      "role": "planner",
+      "response": {
+        "action": "collect",
+        "selections": [
+          {
+            "criterion": "access",
+            "passage": "p1"
+          }
+        ]
+      },
+      "timestamp": "2026-10-20T03:41:43.335206+00:00"
+    },
+    {
+      "type": "model_response",
+      "role": "planner",
+      "response": {
+        "action": "finish"
+      },
+      "timestamp": "2026-10-20T03:41:51.768309+00:00"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "attempt": "live-model-final",
+  "status": "verified",
+  "reason": "All literal criteria rechecked",
+  "steps": 5,
+  "calls": 6,
+  "usage": {
+    "prompt_tokens": 4933,
+    "completion_tokens": 62
+  },
+  "responses": [
+    {
+      "type": "model_response",
+      "role": "planner",
+      "response": {
+        "choice": "a0"
+      },
+      "timestamp": "2026-10-20T03:47:44.868842+00:00"
+    },
+    {
+      "type": "model_response",
+      "role": "planner",
+      "response": {
+        "choice": "a0"
+      },
+      "timestamp": "2026-10-20T03:47:55.340146+00:00"
+    },
+    {
+      "type": "model_response",
+      "role": "planner",
+      "response": {
+        "choice": "a0"
+      },
+      "timestamp": "2026-10-20T03:48:03.767755+00:00"
+    },
+    {
+      "type": "model_response",
+      "role": "planner",
+      "response": {
+        "choice": "a0"
+      },
+      "timestamp": "2026-10-20T03:48:15.104277+00:00"
+    },
+    {
+      "type": "model_response",
+      "role": "planner",
+      "response": {
+        "choice": "a0"
+      },
+      "timestamp": "2026-10-20T03:48:22.072213+00:00"
+    },
+    {
+      "type": "model_response",
+      "role": "verifier",
+      "response": {
+        "accepted": true,
+        "reason": "The evidence provides step-free access and cancellation refund information as required."
+      },
+      "timestamp": "2026-10-20T03:48:34.553893+00:00"
+    }
+  ]
+}

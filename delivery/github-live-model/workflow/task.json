@@ -1,0 +1,23 @@
+{
+  "objective": "Find the workshop accessibility and cancellation policies for a participant checklist. Do not buy or submit anything.",
+  "start_url": "http://127.0.0.1:44179/",
+  "allowed_urls": [
+    "http://127.0.0.1:44179/",
+    "http://127.0.0.1:44179/access",
+    "http://127.0.0.1:44179/refund"
+  ],
+  "criteria": [
+    {
+      "id": "access",
+      "description": "Evidence of step-free venue access",
+      "contains": "Step-free access"
+    },
+    {
+      "id": "refund",
+      "description": "Cancellation refund window",
+      "contains": "Full refund"
+    }
+  ],
+  "max_steps": 16,
+  "max_calls": 20
+}

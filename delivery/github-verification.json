@@ -1,0 +1,95 @@
+{
+  "repository": "https://github.com/oshada28nilendra-debug/webcrew",
+  "branch": "feat/webcrew-first-release",
+  "pull_request": "https://github.com/oshada28nilendra-debug/webcrew/pull/1",
+  "tested_implementation_commit": "2816d38f346f6b3a8a6f79ca4ae90a47517f809d",
+  "status": "verified_release_pr_open",
+  "completed": true,
+  "runs": [
+    {
+      "id": 39435871737,
+      "name": "public-browser-integration",
+      "url": "https://github.com/oshada28nilendra-debug/webcrew/actions/runs/39435871737",
+      "sha": "2816d38f346f6b3a8a6f79ca4ae90a47517f809d",
+      "conclusion": "success"
+    },
+    {
+      "id": 39435871875,
+      "name": "checks",
+      "url": "https://github.com/oshada28nilendra-debug/webcrew/actions/runs/39435871875",
+      "sha": "2816d38f346f6b3a8a6f79ca4ae90a47517f809d",
+      "conclusion": "success"
+    },
+    {
+      "id": 39435871874,
+      "name": "real-local-model",
+      "url": "https://github.com/oshada28nilendra-debug/webcrew/actions/runs/39435871874",
+      "sha": "2816d38f346f6b3a8a6f79ca4ae90a47517f809d",
+      "conclusion": "success"
+    }
+  ],
+  "tests": {
+    "passed": 46,
+    "skipped": 0,
+    "python_versions": [
+      "3.11",
+      "3.12",
+      "3.13"
+    ],
+    "decoded_logs_inspected": true
+  },
+  "public_browser": {
+    "verified": true,
+    "url": "https://www.iana.org/help/example-domains",
+    "browser_version": "149.0.7827.55",
+    "artifact_id": 12272790099,
+    "artifact_sha256": "04900922ed26f77dae1ab66fff8919220e4bb65f7eb38dbd585a21e9042cc0f9",
+    "downloaded_hash_checked": true,
+    "exact_quote_and_fresh_observation_inspected": true
+  },
+  "live_model": {
+    "verified": true,
+    "model": "Official Qwen3-4B Q4_K_M",
+    "runtime": "checksum-pinned llama.cpp b11718 CPU",
+    "calls": 6,
+    "prompt_tokens": 4933,
+    "completion_tokens": 62,
+    "steps": 5,
+    "pause_resume": true,
+    "artifact_id": 12271625691,
+    "artifact_sha256": "21dabd2220441e7d5a231bc1cb2e09a498fb25e4194da24d82401378c671a754",
+    "downloaded_hash_checked": true,
+    "exact_quotes_and_fresh_observations_recomputed": true
+  },
+  "security_checks": {
+    "scanner": "gitleaks",
+    "version": "8.30.1",
+    "result": "passed",
+    "scope": "source and public fixture artifacts; not complete security"
+  },
+  "installed_wheel_gzip_cli": "passed from /tmp using isolated installed target",
+  "paid_model_api_calls": 0,
+  "limits": [
+    "One authored local-model fixture and one public information page; no general task accuracy/security or multi-agent advantage claim",
+    "Read-only HTML tasks; write execution and authenticated/dynamic apps out of release scope",
+    "PR remains open; no automatic merge"
+  ],
+  "historical_failures": [
+    {
+      "run": 39434633663,
+      "reason": "Python3.12/3.13 wheel build lacked global setuptools; fixed isolated build"
+    },
+    {
+      "run": 39434633344,
+      "reason": "Public page returned gzip; bounded decoder regression fixed"
+    },
+    {
+      "run": 39435075936,
+      "reason": "Gzip diagnostic identified raw UTF8 decoding failure"
+    },
+    {
+      "run": 39435546095,
+      "reason": "Python homepage correctly exceeded 80-passage observation cap after gzip fix; public test narrowed to IANA, cap retained"
+    }
+  ]
+}

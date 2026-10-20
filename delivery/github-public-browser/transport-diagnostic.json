@@ -1,0 +1,10 @@
+{
+  "url": "https://www.iana.org/help/example-domains",
+  "status": 200,
+  "mime": "text/html; charset=utf-8",
+  "bytes": 6774,
+  "sha256": "3b8669627aee51b99102e51348e1d9c0b17fe949a481f3272b8f350b2a075c5f",
+  "encoding": "identity",
+  "decoded_bytes": 6774,
+  "html_navigation_policy": "passed"
+}

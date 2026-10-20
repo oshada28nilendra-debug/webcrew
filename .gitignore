@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+*.db
+*.lock
+build/
+dist/
+*.egg-info/
+.ruff_cache/
+model-runtime/
+demo-output/

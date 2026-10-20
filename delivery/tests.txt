@@ -1,0 +1,46 @@
+test_call_budget_survives_resume (tests.test_boundaries.BoundaryTests.test_call_budget_survives_resume) ... ok
+test_dns_private_result_rejected (tests.test_boundaries.BoundaryTests.test_dns_private_result_rejected) ... ok
+test_finite_choices_do_not_offer_premature_completion (tests.test_boundaries.BoundaryTests.test_finite_choices_do_not_offer_premature_completion) ... ok
+test_interrupted_read_intent_resumes_with_budget_reserved (tests.test_boundaries.BoundaryTests.test_interrupted_read_intent_resumes_with_budget_reserved) ... ok
+test_model_choice_dispatch_and_unknown_choice (tests.test_boundaries.BoundaryTests.test_model_choice_dispatch_and_unknown_choice) ... ok
+test_no_evidence_cannot_claim_success (tests.test_boundaries.BoundaryTests.test_no_evidence_cannot_claim_success) ... ok
+test_resume_rejects_changed_mode (tests.test_boundaries.BoundaryTests.test_resume_rejects_changed_mode) ... ok
+test_baseline_end_to_end_and_resume (tests.test_browser.BrowserTests.test_baseline_end_to_end_and_resume) ... ok
+test_budget_exhaustion_persists (tests.test_browser.BrowserTests.test_budget_exhaustion_persists) ... ok
+test_changed_source_fails_fresh_verification (tests.test_browser.BrowserTests.test_changed_source_fails_fresh_verification) ... ok
+test_meta_refresh_cannot_misattribute_evidence (tests.test_browser.BrowserTests.test_meta_refresh_cannot_misattribute_evidence) ... ok
+test_real_chromium_read_and_link_filter (tests.test_browser.BrowserTests.test_real_chromium_read_and_link_filter) ... ok
+test_redirect_to_unlisted_page_blocked (tests.test_browser.BrowserTests.test_redirect_to_unlisted_page_blocked) ... ok
+test_simulated_planner_independent_verifier_veto (tests.test_browser.BrowserTests.test_simulated_planner_independent_verifier_veto) ... ok
+test_unknown_action_is_recorded_failure (tests.test_browser.BrowserTests.test_unknown_action_is_recorded_failure) ... ok
+test_write_request_pauses_without_effect (tests.test_browser.BrowserTests.test_write_request_pauses_without_effect) ... ok
+test_bad_task_exit_two_no_traceback (tests.test_cli_report.CLITests.test_bad_task_exit_two_no_traceback) ... WebCrew: Invalid objective
+ok
+test_inert_html_and_safe_json (tests.test_cli_report.CLITests.test_inert_html_and_safe_json) ... ok
+test_ambiguous_urls_rejected (tests.test_core.CoreTests.test_ambiguous_urls_rejected) ... ok
+test_budget_bounds (tests.test_core.CoreTests.test_budget_bounds) ... ok
+test_duplicate_criteria_rejected (tests.test_core.CoreTests.test_duplicate_criteria_rejected) ... ok
+test_exact_passage_resolved_by_id (tests.test_core.CoreTests.test_exact_passage_resolved_by_id) ... ok
+test_invalid_dns_labels_rejected (tests.test_core.CoreTests.test_invalid_dns_labels_rejected) ... ok
+test_invented_or_irrelevant_selection_rejected (tests.test_core.CoreTests.test_invented_or_irrelevant_selection_rejected) ... ok
+test_malformed_url_container_and_string_do_not_crash (tests.test_core.CoreTests.test_malformed_url_container_and_string_do_not_crash) ... ok
+test_missing_and_changed_evidence_do_not_verify (tests.test_core.CoreTests.test_missing_and_changed_evidence_do_not_verify) ... ok
+test_private_network_rejected_except_explicit_demo (tests.test_core.CoreTests.test_private_network_rejected_except_explicit_demo) ... ok
+test_unlisted_start_rejected (tests.test_core.CoreTests.test_unlisted_start_rejected) ... ok
+test_valid_task (tests.test_core.CoreTests.test_valid_task) ... ok
+test_invalid_json_values (tests.test_state_provider.JSONTests.test_invalid_json_values) ... ok
+test_read_size_and_symlink (tests.test_state_provider.JSONTests.test_read_size_and_symlink) ... ok
+test_malformed_usage_is_safe_adapter_error (tests.test_state_provider.ProviderTests.test_malformed_usage_is_safe_adapter_error) ... ok
+test_missing_hostname_rejected_at_construction (tests.test_state_provider.ProviderTests.test_missing_hostname_rejected_at_construction) ... ok
+test_real_http_adapter_and_redacted_failure (tests.test_state_provider.ProviderTests.test_real_http_adapter_and_redacted_failure) ... ok
+test_remote_needs_consent_and_tls (tests.test_state_provider.ProviderTests.test_remote_needs_consent_and_tls) ... ok
+test_corrupt_checkpoint_safe_error (tests.test_state_provider.StateTests.test_corrupt_checkpoint_safe_error) ... ok
+test_invalid_state_payload_rejected_before_commit (tests.test_state_provider.StateTests.test_invalid_state_payload_rejected_before_commit) ... ok
+test_lock_excludes_concurrent_runner (tests.test_state_provider.StateTests.test_lock_excludes_concurrent_runner) ... ok
+test_resume_atomic_task_bound (tests.test_state_provider.StateTests.test_resume_atomic_task_bound) ... ok
+test_symlink_checkpoint_rejected (tests.test_state_provider.StateTests.test_symlink_checkpoint_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 18.385s
+
+OK

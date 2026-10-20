@@ -1,0 +1,536 @@
+{
+  "schema": 1,
+  "state": {
+    "schema": 1,
+    "status": "verified",
+    "steps": 2,
+    "calls": 0,
+    "visited": [
+      "https://www.iana.org/help/example-domains"
+    ],
+    "current": {
+      "url": "https://www.iana.org/help/example-domains",
+      "title": "Example Domains",
+      "passages": [
+        {
+          "id": "p0",
+          "text": "Domains"
+        },
+        {
+          "id": "p1",
+          "text": "Protocols"
+        },
+        {
+          "id": "p2",
+          "text": "Numbers"
+        },
+        {
+          "id": "p3",
+          "text": "About"
+        },
+        {
+          "id": "p4",
+          "text": "Instructions and Guides"
+        },
+        {
+          "id": "p5",
+          "text": "Example Domains"
+        },
+        {
+          "id": "p6",
+          "text": "A number of domains such as example.com and example.org are maintained for documentation purposes. These domains may be used as illustrative examples in documents without prior coordination with us. They are not available for registration or transfer."
+        },
+        {
+          "id": "p7",
+          "text": "We provide a web service on the example domain hosts to provide basic information on the purpose of the domain. These web services are provided as best effort, but are not designed to support production applications. We strongly recommend you do not design applications that require the example domains to have operating HTTP service."
+        },
+        {
+          "id": "p8",
+          "text": "Further Reading"
+        },
+        {
+          "id": "p9",
+          "text": "IANA-managed Reserved Domains"
+        },
+        {
+          "id": "p10",
+          "text": "Special-Use Domain Names (RFC 6761)"
+        },
+        {
+          "id": "p11",
+          "text": "Reserved Top Level DNS Names (RFC 2606)"
+        },
+        {
+          "id": "p12",
+          "text": "Last revised 2026-09-27."
+        },
+        {
+          "id": "p13",
+          "text": "Domain\u00a0Names"
+        },
+        {
+          "id": "p14",
+          "text": "Root Zone Registry"
+        },
+        {
+          "id": "p15",
+          "text": ".INT Registry"
+        },
+        {
+          "id": "p16",
+          "text": ".ARPA Registry"
+        },
+        {
+          "id": "p17",
+          "text": "IDN Repository"
+        },
+        {
+          "id": "p18",
+          "text": "Number\u00a0Resources"
+        },
+        {
+          "id": "p19",
+          "text": "Number Registries"
+        },
+        {
+          "id": "p20",
+          "text": "RIR Allocation Data"
+        },
+        {
+          "id": "p21",
+          "text": "Abuse Information"
+        },
+        {
+          "id": "p22",
+          "text": "Protocol Registries"
+        },
+        {
+          "id": "p23",
+          "text": "Time Zone Database"
+        },
+        {
+          "id": "p24",
+          "text": "About\u00a0Us"
+        },
+        {
+          "id": "p25",
+          "text": "News"
+        },
+        {
+          "id": "p26",
+          "text": "Performance"
+        },
+        {
+          "id": "p27",
+          "text": "The Organization"
+        },
+        {
+          "id": "p28",
+          "text": "Archive"
+        },
+        {
+          "id": "p29",
+          "text": "Contact Us"
+        },
+        {
+          "id": "p30",
+          "text": "The IANA functions coordinate the Internet\u2019s globally unique identifiers, and are provided by Public Technical Identifiers, an affiliate of ICANN."
+        },
+        {
+          "id": "p31",
+          "text": "Privacy Policy"
+        },
+        {
+          "id": "p32",
+          "text": "Terms of Service"
+        }
+      ],
+      "links": [],
+      "sha256": "ad66568a0bb77f17c2f253aaec3e637562e94cf99ddadce570d23580080730b4",
+      "html_sha256": "3b8669627aee51b99102e51348e1d9c0b17fe949a481f3272b8f350b2a075c5f",
+      "observed_at": "2026-10-20T14:04:20.574500+00:00",
+      "browser_version": "149.0.7827.55"
+    },
+    "evidence": [
+      {
+        "criterion": "purpose",
+        "text": "A number of domains such as example.com and example.org are maintained for documentation purposes. These domains may be used as illustrative examples in documents without prior coordination with us. They are not available for registration or transfer.",
+        "url": "https://www.iana.org/help/example-domains",
+        "source_sha256": "ad66568a0bb77f17c2f253aaec3e637562e94cf99ddadce570d23580080730b4",
+        "text_sha256": "099ba171810eda1ba0155cd76d8e3e8d22600c8d9af69a8ef2aa256183e862aa",
+        "passage": "p6"
+      }
+    ],
+    "verification": {
+      "passed": true,
+      "checks": [
+        {
+          "criterion": "purpose",
+          "passed": true,
+          "evidence": [
+            {
+              "criterion": "purpose",
+              "text": "A number of domains such as example.com and example.org are maintained for documentation purposes. These domains may be used as illustrative examples in documents without prior coordination with us. They are not available for registration or transfer.",
+              "url": "https://www.iana.org/help/example-domains",
+              "source_sha256": "ad66568a0bb77f17c2f253aaec3e637562e94cf99ddadce570d23580080730b4",
+              "text_sha256": "099ba171810eda1ba0155cd76d8e3e8d22600c8d9af69a8ef2aa256183e862aa",
+              "passage": "p6"
+            }
+          ],
+          "reason": "Exact passage observed again"
+        }
+      ],
+      "fresh_sources": {
+        "https://www.iana.org/help/example-domains": {
+          "url": "https://www.iana.org/help/example-domains",
+          "title": "Example Domains",
+          "passages": [
+            {
+              "id": "p0",
+              "text": "Domains"
+            },
+            {
+              "id": "p1",
+              "text": "Protocols"
+            },
+            {
+              "id": "p2",
+              "text": "Numbers"
+            },
+            {
+              "id": "p3",
+              "text": "About"
+            },
+            {
+              "id": "p4",
+              "text": "Instructions and Guides"
+            },
+            {
+              "id": "p5",
+              "text": "Example Domains"
+            },
+            {
+              "id": "p6",
+              "text": "A number of domains such as example.com and example.org are maintained for documentation purposes. These domains may be used as illustrative examples in documents without prior coordination with us. They are not available for registration or transfer."
+            },
+            {
+              "id": "p7",
+              "text": "We provide a web service on the example domain hosts to provide basic information on the purpose of the domain. These web services are provided as best effort, but are not designed to support production applications. We strongly recommend you do not design applications that require the example domains to have operating HTTP service."
+            },
+            {
+              "id": "p8",
+              "text": "Further Reading"
+            },
+            {
+              "id": "p9",
+              "text": "IANA-managed Reserved Domains"
+            },
+            {
+              "id": "p10",
+              "text": "Special-Use Domain Names (RFC 6761)"
+            },
+            {
+              "id": "p11",
+              "text": "Reserved Top Level DNS Names (RFC 2606)"
+            },
+            {
+              "id": "p12",
+              "text": "Last revised 2026-09-27."
+            },
+            {
+              "id": "p13",
+              "text": "Domain\u00a0Names"
+            },
+            {
+              "id": "p14",
+              "text": "Root Zone Registry"
+            },
+            {
+              "id": "p15",
+              "text": ".INT Registry"
+            },
+            {
+              "id": "p16",
+              "text": ".ARPA Registry"
+            },
+            {
+              "id": "p17",
+              "text": "IDN Repository"
+            },
+            {
+              "id": "p18",
+              "text": "Number\u00a0Resources"
+            },
+            {
+              "id": "p19",
+              "text": "Number Registries"
+            },
+            {
+              "id": "p20",
+              "text": "RIR Allocation Data"
+            },
+            {
+              "id": "p21",
+              "text": "Abuse Information"
+            },
+            {
+              "id": "p22",
+              "text": "Protocol Registries"
+            },
+            {
+              "id": "p23",
+              "text": "Time Zone Database"
+            },
+            {
+              "id": "p24",
+              "text": "About\u00a0Us"
+            },
+            {
+              "id": "p25",
+              "text": "News"
+            },
+            {
+              "id": "p26",
+              "text": "Performance"
+            },
+            {
+              "id": "p27",
+              "text": "The Organization"
+            },
+            {
+              "id": "p28",
+              "text": "Archive"
+            },
+            {
+              "id": "p29",
+              "text": "Contact Us"
+            },
+            {
+              "id": "p30",
+              "text": "The IANA functions coordinate the Internet\u2019s globally unique identifiers, and are provided by Public Technical Identifiers, an affiliate of ICANN."
+            },
+            {
+              "id": "p31",
+              "text": "Privacy Policy"
+            },
+            {
+              "id": "p32",
+              "text": "Terms of Service"
+            }
+          ],
+          "links": [],
+          "sha256": "ad66568a0bb77f17c2f253aaec3e637562e94cf99ddadce570d23580080730b4",
+          "html_sha256": "3b8669627aee51b99102e51348e1d9c0b17fe949a481f3272b8f350b2a075c5f",
+          "observed_at": "2026-10-20T14:04:21.351771+00:00",
+          "browser_version": "149.0.7827.55"
+        }
+      }
+    },
+    "pending": null,
+    "model_usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0
+    },
+    "mode": "baseline",
+    "frontier": [],
+    "reason": "All literal criteria rechecked"
+  },
+  "events": [
+    {
+      "type": "observation",
+      "snapshot": {
+        "url": "https://www.iana.org/help/example-domains",
+        "title": "Example Domains",
+        "passages": [
+          {
+            "id": "p0",
+            "text": "Domains"
+          },
+          {
+            "id": "p1",
+            "text": "Protocols"
+          },
+          {
+            "id": "p2",
+            "text": "Numbers"
+          },
+          {
+            "id": "p3",
+            "text": "About"
+          },
+          {
+            "id": "p4",
+            "text": "Instructions and Guides"
+          },
+          {
+            "id": "p5",
+            "text": "Example Domains"
+          },
+          {
+            "id": "p6",
+            "text": "A number of domains such as example.com and example.org are maintained for documentation purposes. These domains may be used as illustrative examples in documents without prior coordination with us. They are not available for registration or transfer."
+          },
+          {
+            "id": "p7",
+            "text": "We provide a web service on the example domain hosts to provide basic information on the purpose of the domain. These web services are provided as best effort, but are not designed to support production applications. We strongly recommend you do not design applications that require the example domains to have operating HTTP service."
+          },
+          {
+            "id": "p8",
+            "text": "Further Reading"
+          },
+          {
+            "id": "p9",
+            "text": "IANA-managed Reserved Domains"
+          },
+          {
+            "id": "p10",
+            "text": "Special-Use Domain Names (RFC 6761)"
+          },
+          {
+            "id": "p11",
+            "text": "Reserved Top Level DNS Names (RFC 2606)"
+          },
+          {
+            "id": "p12",
+            "text": "Last revised 2026-09-27."
+          },
+          {
+            "id": "p13",
+            "text": "Domain\u00a0Names"
+          },
+          {
+            "id": "p14",
+            "text": "Root Zone Registry"
+          },
+          {
+            "id": "p15",
+            "text": ".INT Registry"
+          },
+          {
+            "id": "p16",
+            "text": ".ARPA Registry"
+          },
+          {
+            "id": "p17",
+            "text": "IDN Repository"
+          },
+          {
+            "id": "p18",
+            "text": "Number\u00a0Resources"
+          },
+          {
+            "id": "p19",
+            "text": "Number Registries"
+          },
+          {
+            "id": "p20",
+            "text": "RIR Allocation Data"
+          },
+          {
+            "id": "p21",
+            "text": "Abuse Information"
+          },
+          {
+            "id": "p22",
+            "text": "Protocol Registries"
+          },
+          {
+            "id": "p23",
+            "text": "Time Zone Database"
+          },
+          {
+            "id": "p24",
+            "text": "About\u00a0Us"
+          },
+          {
+            "id": "p25",
+            "text": "News"
+          },
+          {
+            "id": "p26",
+            "text": "Performance"
+          },
+          {
+            "id": "p27",
+            "text": "The Organization"
+          },
+          {
+            "id": "p28",
+            "text": "Archive"
+          },
+          {
+            "id": "p29",
+            "text": "Contact Us"
+          },
+          {
+            "id": "p30",
+            "text": "The IANA functions coordinate the Internet\u2019s globally unique identifiers, and are provided by Public Technical Identifiers, an affiliate of ICANN."
+          },
+          {
+            "id": "p31",
+            "text": "Privacy Policy"
+          },
+          {
+            "id": "p32",
+            "text": "Terms of Service"
+          }
+        ],
+        "links": [],
+        "sha256": "ad66568a0bb77f17c2f253aaec3e637562e94cf99ddadce570d23580080730b4",
+        "html_sha256": "3b8669627aee51b99102e51348e1d9c0b17fe949a481f3272b8f350b2a075c5f",
+        "observed_at": "2026-10-20T14:04:20.574500+00:00",
+        "browser_version": "149.0.7827.55"
+      },
+      "timestamp": "2026-10-20T14:04:20.574535+00:00"
+    },
+    {
+      "type": "action_started",
+      "action": {
+        "action": "collect",
+        "selections": [
+          {
+            "criterion": "purpose",
+            "passage": "p6"
+          }
+        ]
+      },
+      "timestamp": "2026-10-20T14:04:20.575855+00:00"
+    },
+    {
+      "type": "action_completed",
+      "action": {
+        "action": "collect",
+        "selections": [
+          {
+            "criterion": "purpose",
+            "passage": "p6"
+          }
+        ]
+      },
+      "snapshot": null,
+      "timestamp": "2026-10-20T14:04:20.598885+00:00"
+    },
+    {
+      "type": "action_started",
+      "action": {
+        "action": "finish"
+      },
+      "timestamp": "2026-10-20T14:04:20.599828+00:00"
+    },
+    {
+      "type": "action_completed",
+      "action": {
+        "action": "finish"
+      },
+      "snapshot": null,
+      "timestamp": "2026-10-20T14:04:20.600656+00:00"
+    },
+    {
+      "type": "stopped",
+      "status": "verified",
+      "reason": "All literal criteria rechecked",
+      "timestamp": "2026-10-20T14:04:21.383190+00:00"
+    }
+  ],
+  "limitations": "Rendered text rechecked at observation time; not proof of truth or general task correctness. No external writes were executed."
+}

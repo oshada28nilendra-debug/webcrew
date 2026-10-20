@@ -1,0 +1,39 @@
+{
+  "status": "verified",
+  "mode": "baseline",
+  "steps": 5,
+  "calls": 0,
+  "usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0
+  },
+  "requests": [
+    [
+      "GET",
+      "/"
+    ],
+    [
+      "GET",
+      "/access"
+    ],
+    [
+      "GET",
+      "/access"
+    ],
+    [
+      "GET",
+      "/refund"
+    ],
+    [
+      "GET",
+      "/access"
+    ],
+    [
+      "GET",
+      "/refund"
+    ]
+  ],
+  "pause_resume": true,
+  "fixture": "Authored fictional workshop; not a real website task benchmark",
+  "browser_version": "149.0.7827.55"
+}
