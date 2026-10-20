@@ -1,9 +1,14 @@
 """Actual opt-in public HTTPS browser check; a failed result is never a fixture pass."""
 
 import argparse
+import hashlib
+import json
 from pathlib import Path
+from urllib.parse import urlsplit
 
-from webcrew.core import Task
+from webcrew.browser import resolve, _NavigationPolicy
+from webcrew.core import Error, Task
+from webcrew.httpio import DeadlineHTTP, read_exchange
 from webcrew.report import export
 from webcrew.runner import run
 from webcrew.state import Store
@@ -28,6 +33,35 @@ def main():
             ],
         }
     )
+    # Public-only diagnostic, using exactly the same DNS-pinned bounded transport.
+    # No private URLs, credentials, response headers or bodies are logged.
+    diagnostic = {"url": task.start_url}
+    try:
+        addresses = resolve(task)
+        url = urlsplit(task.start_url)
+        conn = DeadlineHTTP(url.hostname, 443, 15, tls=True, ip=addresses[url.hostname])
+        status, headers, body = read_exchange(
+            conn,
+            "GET",
+            url.path or "/",
+            {"User-Agent": "WebCrew/0.1 read-only audit", "Accept": "text/html"},
+            timeout=15,
+            max_bytes=1_000_000,
+        )
+        diagnostic.update(
+            status=status,
+            mime=headers.get("content-type"),
+            bytes=len(body),
+            sha256=hashlib.sha256(body).hexdigest(),
+        )
+        parser = _NavigationPolicy()
+        parser.feed(body.decode("utf-8"))
+        parser.close()
+        diagnostic["html_navigation_policy"] = "passed"
+    except (Error, UnicodeError) as exc:
+        diagnostic["error"] = str(exc)
+    (args.out / "transport-diagnostic.json").write_text(json.dumps(diagnostic, indent=2) + "\n")
+    print(json.dumps(diagnostic), flush=True)
     state = run(task, args.out / "run.db")
     with Store(args.out / "run.db", task) as store:
         export(state, store.events(), args.out / "report")

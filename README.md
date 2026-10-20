@@ -111,7 +111,7 @@ python -m unittest discover -v
 python -m ruff check .
 python -m ruff format --check .
 python -m compileall -q webcrew
-python -m build --wheel --no-isolation
+python -m build --wheel
 ```
 
 Browser tests are mandatory and fail if Chromium is unavailable; none silently substitutes a fake browser. Simulated model tests are named separately. See [verification](docs/VERIFICATION.md), [validation and alternatives](docs/VALIDATION.md), [design](docs/DESIGN.md), [handoff](docs/HANDOFF.md) and [security](SECURITY.md). Included GitHub workflows have not run remotely without a designated repository.
