@@ -21,14 +21,14 @@ def main():
     args.out.mkdir(parents=True, exist_ok=False)
     task = Task.parse(
         {
-            "objective": "Find a public description of Python as a programming language",
-            "start_url": "https://www.python.org/",
-            "allowed_urls": ["https://www.python.org/"],
+            "objective": "Verify IANA's documented purpose for reserved example domains",
+            "start_url": "https://www.iana.org/help/example-domains",
+            "allowed_urls": ["https://www.iana.org/help/example-domains"],
             "criteria": [
                 {
-                    "id": "language",
-                    "description": "Python language description",
-                    "contains": "programming language",
+                    "id": "purpose",
+                    "description": "Reserved example domains are maintained for documentation",
+                    "contains": "documentation purposes",
                 }
             ],
         }
