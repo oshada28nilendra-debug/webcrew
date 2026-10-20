@@ -1,0 +1,479 @@
+{
+  "schema": 1,
+  "state": {
+    "schema": 1,
+    "status": "verified",
+    "steps": 5,
+    "calls": 6,
+    "visited": [
+      "http://127.0.0.1:42159/",
+      "http://127.0.0.1:42159/access",
+      "http://127.0.0.1:42159/refund"
+    ],
+    "current": {
+      "url": "http://127.0.0.1:42159/refund",
+      "title": "Fictional workshop",
+      "passages": [
+        {
+          "id": "p0",
+          "text": "Cancellation policy"
+        },
+        {
+          "id": "p1",
+          "text": "Full refund is available until 48 hours before the workshop."
+        }
+      ],
+      "links": [],
+      "sha256": "f9cd6f48c46ad8fdf4bd79933eae6a79bcb6fd2cb3aa030f48f8d1b14267b754",
+      "html_sha256": "532f47929a4363b79d3a858f435b674cb857b9bc401c1ad03bc7db386f300950",
+      "observed_at": "2026-10-20T13:57:22.453871+00:00",
+      "browser_version": "149.0.7827.55"
+    },
+    "evidence": [
+      {
+        "criterion": "access",
+        "text": "Step-free access is available at the east entrance.",
+        "url": "http://127.0.0.1:42159/access",
+        "source_sha256": "8d2d6702254f6b662f4b2e00f4f157d9030609181948358b3912b2c0bb7efcad",
+        "text_sha256": "235ebc9a26c55c409fb4fb08a73846c0e51161993da201d06ca8a87ba7922b66",
+        "passage": "p1"
+      },
+      {
+        "criterion": "refund",
+        "text": "Full refund is available until 48 hours before the workshop.",
+        "url": "http://127.0.0.1:42159/refund",
+        "source_sha256": "f9cd6f48c46ad8fdf4bd79933eae6a79bcb6fd2cb3aa030f48f8d1b14267b754",
+        "text_sha256": "7b7182ee69708214582dbb26ad0815d6ace18b63246d1c11aa84004db4de5832",
+        "passage": "p1"
+      }
+    ],
+    "verification": {
+      "passed": true,
+      "checks": [
+        {
+          "criterion": "access",
+          "passed": true,
+          "evidence": [
+            {
+              "criterion": "access",
+              "text": "Step-free access is available at the east entrance.",
+              "url": "http://127.0.0.1:42159/access",
+              "source_sha256": "8d2d6702254f6b662f4b2e00f4f157d9030609181948358b3912b2c0bb7efcad",
+              "text_sha256": "235ebc9a26c55c409fb4fb08a73846c0e51161993da201d06ca8a87ba7922b66",
+              "passage": "p1"
+            }
+          ],
+          "reason": "Exact passage observed again"
+        },
+        {
+          "criterion": "refund",
+          "passed": true,
+          "evidence": [
+            {
+              "criterion": "refund",
+              "text": "Full refund is available until 48 hours before the workshop.",
+              "url": "http://127.0.0.1:42159/refund",
+              "source_sha256": "f9cd6f48c46ad8fdf4bd79933eae6a79bcb6fd2cb3aa030f48f8d1b14267b754",
+              "text_sha256": "7b7182ee69708214582dbb26ad0815d6ace18b63246d1c11aa84004db4de5832",
+              "passage": "p1"
+            }
+          ],
+          "reason": "Exact passage observed again"
+        }
+      ],
+      "fresh_sources": {
+        "http://127.0.0.1:42159/access": {
+          "url": "http://127.0.0.1:42159/access",
+          "title": "Fictional workshop",
+          "passages": [
+            {
+              "id": "p0",
+              "text": "Venue access"
+            },
+            {
+              "id": "p1",
+              "text": "Step-free access is available at the east entrance."
+            },
+            {
+              "id": "p2",
+              "text": "Cancellation policy"
+            }
+          ],
+          "links": [
+            {
+              "id": "l0",
+              "url": "http://127.0.0.1:42159/refund",
+              "text": "Cancellation policy"
+            }
+          ],
+          "sha256": "8d2d6702254f6b662f4b2e00f4f157d9030609181948358b3912b2c0bb7efcad",
+          "html_sha256": "abe17cfed70d13420971bc1eaf696eb119f8f593dac5fe8967bab10a29f8f007",
+          "observed_at": "2026-10-20T13:58:07.593452+00:00",
+          "browser_version": "149.0.7827.55"
+        },
+        "http://127.0.0.1:42159/refund": {
+          "url": "http://127.0.0.1:42159/refund",
+          "title": "Fictional workshop",
+          "passages": [
+            {
+              "id": "p0",
+              "text": "Cancellation policy"
+            },
+            {
+              "id": "p1",
+              "text": "Full refund is available until 48 hours before the workshop."
+            }
+          ],
+          "links": [],
+          "sha256": "f9cd6f48c46ad8fdf4bd79933eae6a79bcb6fd2cb3aa030f48f8d1b14267b754",
+          "html_sha256": "532f47929a4363b79d3a858f435b674cb857b9bc401c1ad03bc7db386f300950",
+          "observed_at": "2026-10-20T13:58:07.627588+00:00",
+          "browser_version": "149.0.7827.55"
+        }
+      },
+      "model_review": {
+        "accepted": true,
+        "reason": "The evidence provides step-free access and cancellation refund information as required."
+      }
+    },
+    "pending": null,
+    "model_usage": {
+      "prompt_tokens": 4933,
+      "completion_tokens": 62
+    },
+    "mode": "model",
+    "frontier": [
+      {
+        "id": "l0",
+        "url": "http://127.0.0.1:42159/access",
+        "text": "Venue access"
+      },
+      {
+        "id": "l1",
+        "url": "http://127.0.0.1:42159/refund",
+        "text": "Cancellation policy"
+      }
+    ],
+    "reason": "All literal criteria rechecked"
+  },
+  "events": [
+    {
+      "type": "observation",
+      "snapshot": {
+        "url": "http://127.0.0.1:42159/",
+        "title": "Fictional workshop",
+        "passages": [
+          {
+            "id": "p0",
+            "text": "Community Workshop"
+          },
+          {
+            "id": "p1",
+            "text": "Find venue and cancellation policies."
+          },
+          {
+            "id": "p2",
+            "text": "Venue accessCancellation policyBuy ticket"
+          }
+        ],
+        "links": [
+          {
+            "id": "l0",
+            "url": "http://127.0.0.1:42159/access",
+            "text": "Venue access"
+          },
+          {
+            "id": "l1",
+            "url": "http://127.0.0.1:42159/refund",
+            "text": "Cancellation policy"
+          }
+        ],
+        "sha256": "6507432948dd9f0b74bb8ef6803932a171215f86be9c470e446e1e576207bcf0",
+        "html_sha256": "d2552254d0ec85a468bf8c44771272f460a8a0b9c708542ddaf92251ae491784",
+        "observed_at": "2026-10-20T13:56:08.900947+00:00",
+        "browser_version": "149.0.7827.55"
+      },
+      "timestamp": "2026-10-20T13:56:08.900978+00:00"
+    },
+    {
+      "type": "model_call_started",
+      "role": "planner",
+      "call": 1,
+      "timestamp": "2026-10-20T13:56:08.902353+00:00"
+    },
+    {
+      "type": "model_response",
+      "role": "planner",
+      "response": {
+        "choice": "a0"
+      },
+      "timestamp": "2026-10-20T13:56:39.163305+00:00"
+    },
+    {
+      "type": "action_started",
+      "action": {
+        "action": "visit",
+        "link": "l0"
+      },
+      "timestamp": "2026-10-20T13:56:39.168891+00:00"
+    },
+    {
+      "type": "action_completed",
+      "action": {
+        "action": "visit",
+        "link": "l0"
+      },
+      "snapshot": {
+        "url": "http://127.0.0.1:42159/access",
+        "title": "Fictional workshop",
+        "passages": [
+          {
+            "id": "p0",
+            "text": "Venue access"
+          },
+          {
+            "id": "p1",
+            "text": "Step-free access is available at the east entrance."
+          },
+          {
+            "id": "p2",
+            "text": "Cancellation policy"
+          }
+        ],
+        "links": [
+          {
+            "id": "l1",
+            "url": "http://127.0.0.1:42159/refund",
+            "text": "Cancellation policy"
+          }
+        ],
+        "sha256": "8d2d6702254f6b662f4b2e00f4f157d9030609181948358b3912b2c0bb7efcad",
+        "html_sha256": "abe17cfed70d13420971bc1eaf696eb119f8f593dac5fe8967bab10a29f8f007",
+        "observed_at": "2026-10-20T13:56:39.215239+00:00",
+        "browser_version": "149.0.7827.55"
+      },
+      "timestamp": "2026-10-20T13:56:39.215266+00:00"
+    },
+    {
+      "type": "model_call_started",
+      "role": "planner",
+      "call": 2,
+      "timestamp": "2026-10-20T13:56:39.216349+00:00"
+    },
+    {
+      "type": "model_response",
+      "role": "planner",
+      "response": {
+        "choice": "a0"
+      },
+      "timestamp": "2026-10-20T13:57:03.544276+00:00"
+    },
+    {
+      "type": "action_started",
+      "action": {
+        "action": "collect",
+        "selections": [
+          {
+            "criterion": "access",
+            "passage": "p1"
+          }
+        ]
+      },
+      "timestamp": "2026-10-20T13:57:03.545582+00:00"
+    },
+    {
+      "type": "action_completed",
+      "action": {
+        "action": "collect",
+        "selections": [
+          {
+            "criterion": "access",
+            "passage": "p1"
+          }
+        ]
+      },
+      "snapshot": null,
+      "timestamp": "2026-10-20T13:57:03.546610+00:00"
+    },
+    {
+      "type": "stopped",
+      "status": "paused",
+      "reason": null,
+      "timestamp": "2026-10-20T13:57:03.590299+00:00"
+    },
+    {
+      "type": "observation",
+      "snapshot": {
+        "url": "http://127.0.0.1:42159/access",
+        "title": "Fictional workshop",
+        "passages": [
+          {
+            "id": "p0",
+            "text": "Venue access"
+          },
+          {
+            "id": "p1",
+            "text": "Step-free access is available at the east entrance."
+          },
+          {
+            "id": "p2",
+            "text": "Cancellation policy"
+          }
+        ],
+        "links": [
+          {
+            "id": "l1",
+            "url": "http://127.0.0.1:42159/refund",
+            "text": "Cancellation policy"
+          }
+        ],
+        "sha256": "8d2d6702254f6b662f4b2e00f4f157d9030609181948358b3912b2c0bb7efcad",
+        "html_sha256": "abe17cfed70d13420971bc1eaf696eb119f8f593dac5fe8967bab10a29f8f007",
+        "observed_at": "2026-10-20T13:57:04.147890+00:00",
+        "browser_version": "149.0.7827.55"
+      },
+      "timestamp": "2026-10-20T13:57:04.147920+00:00"
+    },
+    {
+      "type": "model_call_started",
+      "role": "planner",
+      "call": 3,
+      "timestamp": "2026-10-20T13:57:04.149214+00:00"
+    },
+    {
+      "type": "model_response",
+      "role": "planner",
+      "response": {
+        "choice": "a0"
+      },
+      "timestamp": "2026-10-20T13:57:22.419584+00:00"
+    },
+    {
+      "type": "action_started",
+      "action": {
+        "action": "visit",
+        "link": "l1"
+      },
+      "timestamp": "2026-10-20T13:57:22.424268+00:00"
+    },
+    {
+      "type": "action_completed",
+      "action": {
+        "action": "visit",
+        "link": "l1"
+      },
+      "snapshot": {
+        "url": "http://127.0.0.1:42159/refund",
+        "title": "Fictional workshop",
+        "passages": [
+          {
+            "id": "p0",
+            "text": "Cancellation policy"
+          },
+          {
+            "id": "p1",
+            "text": "Full refund is available until 48 hours before the workshop."
+          }
+        ],
+        "links": [],
+        "sha256": "f9cd6f48c46ad8fdf4bd79933eae6a79bcb6fd2cb3aa030f48f8d1b14267b754",
+        "html_sha256": "532f47929a4363b79d3a858f435b674cb857b9bc401c1ad03bc7db386f300950",
+        "observed_at": "2026-10-20T13:57:22.453871+00:00",
+        "browser_version": "149.0.7827.55"
+      },
+      "timestamp": "2026-10-20T13:57:22.453892+00:00"
+    },
+    {
+      "type": "model_call_started",
+      "role": "planner",
+      "call": 4,
+      "timestamp": "2026-10-20T13:57:22.455251+00:00"
+    },
+    {
+      "type": "model_response",
+      "role": "planner",
+      "response": {
+        "choice": "a0"
+      },
+      "timestamp": "2026-10-20T13:57:50.626346+00:00"
+    },
+    {
+      "type": "action_started",
+      "action": {
+        "action": "collect",
+        "selections": [
+          {
+            "criterion": "refund",
+            "passage": "p1"
+          }
+        ]
+      },
+      "timestamp": "2026-10-20T13:57:50.629727+00:00"
+    },
+    {
+      "type": "action_completed",
+      "action": {
+        "action": "collect",
+        "selections": [
+          {
+            "criterion": "refund",
+            "passage": "p1"
+          }
+        ]
+      },
+      "snapshot": null,
+      "timestamp": "2026-10-20T13:57:50.630697+00:00"
+    },
+    {
+      "type": "model_call_started",
+      "role": "planner",
+      "call": 5,
+      "timestamp": "2026-10-20T13:57:50.631549+00:00"
+    },
+    {
+      "type": "model_response",
+      "role": "planner",
+      "response": {
+        "choice": "a0"
+      },
+      "timestamp": "2026-10-20T13:58:06.964083+00:00"
+    },
+    {
+      "type": "action_started",
+      "action": {
+        "action": "finish"
+      },
+      "timestamp": "2026-10-20T13:58:06.965450+00:00"
+    },
+    {
+      "type": "action_completed",
+      "action": {
+        "action": "finish"
+      },
+      "snapshot": null,
+      "timestamp": "2026-10-20T13:58:06.966410+00:00"
+    },
+    {
+      "type": "model_call_started",
+      "role": "verifier",
+      "call": 6,
+      "timestamp": "2026-10-20T13:58:07.675549+00:00"
+    },
+    {
+      "type": "model_response",
+      "role": "verifier",
+      "response": {
+        "accepted": true,
+        "reason": "The evidence provides step-free access and cancellation refund information as required."
+      },
+      "timestamp": "2026-10-20T13:58:33.211275+00:00"
+    },
+    {
+      "type": "stopped",
+      "status": "verified",
+      "reason": "All literal criteria rechecked",
+      "timestamp": "2026-10-20T13:58:33.212617+00:00"
+    }
+  ],
+  "limitations": "Rendered text rechecked at observation time; not proof of truth or general task correctness. No external writes were executed."
+}

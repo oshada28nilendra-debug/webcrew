@@ -631,8 +631,8 @@
       "slot": "2026-10-19-afternoon",
       "local_time": "13:00",
       "project": "WebCrew",
-      "status": "release_publication_and_hosted_verification_in_progress",
-      "completed": false,
+      "status": "verified_release_pr_open",
+      "completed": true,
       "target_user": "Small organizations collecting public service/workshop policy details across approved pages",
       "problem": "Agents can navigate yet declare an unsupported outcome or lose task progress",
       "differentiator": "Finite action choices, exact page allowlist, task-bound checkpoint and fresh independent source verification",
@@ -640,94 +640,116 @@
       "repository": "https://github.com/oshada28nilendra-debug/webcrew",
       "branch": "feat/webcrew-first-release",
       "verification": {
-        "delivery_date": "2026-10-20",
-        "slot": "2026-10-19-afternoon",
-        "python": "3.12.14",
-        "tests": {
-          "passed": 40,
-          "skipped": 0,
-          "log": "delivery/tests.txt"
-        },
-        "lint": "passed",
-        "format": "passed",
-        "compile": "passed",
-        "wheel": "passed",
-        "installed_cli": "passed",
-        "browser": {
-          "version": "149.0.7827.55",
-          "kind": "official headless-shell",
-          "real_execution": true,
-          "fixture": "authored fictional workshop"
-        },
-        "live_model": {
-          "status": "verified",
-          "mode": "model",
-          "steps": 5,
-          "calls": 6,
-          "usage": {
-            "prompt_tokens": 4933,
-            "completion_tokens": 62
+        "repository": "https://github.com/oshada28nilendra-debug/webcrew",
+        "branch": "feat/webcrew-first-release",
+        "pull_request": "https://github.com/oshada28nilendra-debug/webcrew/pull/1",
+        "tested_implementation_commit": "2816d38f346f6b3a8a6f79ca4ae90a47517f809d",
+        "status": "verified_release_pr_open",
+        "completed": true,
+        "runs": [
+          {
+            "id": 39435871737,
+            "name": "public-browser-integration",
+            "url": "https://github.com/oshada28nilendra-debug/webcrew/actions/runs/39435871737",
+            "sha": "2816d38f346f6b3a8a6f79ca4ae90a47517f809d",
+            "conclusion": "success"
           },
-          "requests": [
-            [
-              "GET",
-              "/"
-            ],
-            [
-              "GET",
-              "/access"
-            ],
-            [
-              "GET",
-              "/access"
-            ],
-            [
-              "GET",
-              "/refund"
-            ],
-            [
-              "GET",
-              "/access"
-            ],
-            [
-              "GET",
-              "/refund"
-            ]
+          {
+            "id": 39435871875,
+            "name": "checks",
+            "url": "https://github.com/oshada28nilendra-debug/webcrew/actions/runs/39435871875",
+            "sha": "2816d38f346f6b3a8a6f79ca4ae90a47517f809d",
+            "conclusion": "success"
+          },
+          {
+            "id": 39435871874,
+            "name": "real-local-model",
+            "url": "https://github.com/oshada28nilendra-debug/webcrew/actions/runs/39435871874",
+            "sha": "2816d38f346f6b3a8a6f79ca4ae90a47517f809d",
+            "conclusion": "success"
+          }
+        ],
+        "tests": {
+          "passed": 46,
+          "skipped": 0,
+          "python_versions": [
+            "3.11",
+            "3.12",
+            "3.13"
           ],
-          "pause_resume": true,
-          "fixture": "Authored fictional workshop; not a real website task benchmark",
-          "browser_version": "149.0.7827.55"
+          "decoded_logs_inspected": true
         },
         "public_browser": {
-          "verified": false,
-          "failure": "system DNS resolution failed",
-          "report": "delivery/public-browser/report/report.json"
+          "verified": true,
+          "url": "https://www.iana.org/help/example-domains",
+          "browser_version": "149.0.7827.55",
+          "artifact_id": 12272790099,
+          "artifact_sha256": "04900922ed26f77dae1ab66fff8919220e4bb65f7eb38dbd585a21e9042cc0f9",
+          "downloaded_hash_checked": true,
+          "exact_quote_and_fresh_observation_inspected": true
+        },
+        "live_model": {
+          "verified": true,
+          "model": "Official Qwen3-4B Q4_K_M",
+          "runtime": "checksum-pinned llama.cpp b11718 CPU",
+          "calls": 6,
+          "prompt_tokens": 4933,
+          "completion_tokens": 62,
+          "steps": 5,
+          "pause_resume": true,
+          "artifact_id": 12271625691,
+          "artifact_sha256": "21dabd2220441e7d5a231bc1cb2e09a498fb25e4194da24d82401378c671a754",
+          "downloaded_hash_checked": true,
+          "exact_quotes_and_fresh_observations_recomputed": true
         },
         "security_checks": {
           "scanner": "gitleaks",
           "version": "8.30.1",
           "result": "passed",
-          "scope": "local source and fictional delivery evidence only"
+          "scope": "source and public fixture artifacts; not complete security"
         },
-        "independent_review": "four findings fixed with red-green regressions; suite passed",
-        "repository": null,
-        "remote_ci_executed": false,
-        "paid_api_calls": 0,
-        "status": "implementation_delivered_live_model_verified_public_integration_blocked_publication_pending"
+        "installed_wheel_gzip_cli": "passed from /tmp using isolated installed target",
+        "paid_model_api_calls": 0,
+        "limits": [
+          "One authored local-model fixture and one public information page; no general task accuracy/security or multi-agent advantage claim",
+          "Read-only HTML tasks; write execution and authenticated/dynamic apps out of release scope",
+          "PR remains open; no automatic merge"
+        ],
+        "historical_failures": [
+          {
+            "run": 39434633663,
+            "reason": "Python3.12/3.13 wheel build lacked global setuptools; fixed isolated build"
+          },
+          {
+            "run": 39434633344,
+            "reason": "Public page returned gzip; bounded decoder regression fixed"
+          },
+          {
+            "run": 39435075936,
+            "reason": "Gzip diagnostic identified raw UTF8 decoding failure"
+          },
+          {
+            "run": 39435546095,
+            "reason": "Python homepage correctly exceeded 80-passage observation cap after gzip fix; public test narrowed to IANA, cap retained"
+          }
+        ]
       },
       "delivery_links": [
-        "WebCrew-2026-10-19-source.zip",
+        "https://github.com/oshada28nilendra-debug/webcrew/pull/1",
         "docs/VERIFICATION.md",
-        "delivery/live-model-final/workflow/report/report.json"
+        "delivery/github-verification.json",
+        "https://github.com/oshada28nilendra-debug/webcrew/actions/runs/39435871737",
+        "https://github.com/oshada28nilendra-debug/webcrew/actions/runs/39435871875",
+        "https://github.com/oshada28nilendra-debug/webcrew/actions/runs/39435871874"
       ],
       "suggested_repository": "oshada28nilendra-debug/webcrew",
       "suggested_branch": "feat/webcrew-first-release",
       "source_package": "WebCrew-2026-10-19-source.zip",
       "library_file_id": "libfile_bf374688e9c88191b9fc712c5769a5e0",
-      "remaining": [
-        "Public HTTPS browser integration under working DNS/egress",
-        "Repository designation, push, PR and hosted CI"
-      ]
+      "remaining": [],
+      "pull_request": "https://github.com/oshada28nilendra-debug/webcrew/pull/1",
+      "commit": "2816d38f346f6b3a8a6f79ca4ae90a47517f809d",
+      "source_package_note": "Historical pre-publication archive; prefer published feature branch"
     },
     {
       "slot": "2026-10-19-evening",

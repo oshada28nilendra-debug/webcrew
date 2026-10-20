@@ -1,42 +1,28 @@
 # Verification — 20 October 2026
 
-## Follow-up check — 20 October, afternoon
+**Bounded release implemented, published and verified; PR #1 is open.**
 
-Reopened the actual saved archive and matched its recorded 105159-byte SHA256 before continuation. Retried `scripts/public_smoke.py` after restoring the Python browser dependency removed by workspace maintenance. It again exited 3 with `Approved page DNS resolution failed`; no public page or browser was exercised. Actual new report: `delivery/public-retry-20261020-1300/report/report.json`. This retry does not rerun or supersede the earlier 40-test/local-model results. Application source is unchanged.
+Repository: https://github.com/oshada28nilendra-debug/webcrew
+Branch: `feat/webcrew-first-release`
+PR: https://github.com/oshada28nilendra-debug/webcrew/pull/1
+Tested implementation: `2816d38f346f6b3a8a6f79ca4ae90a47517f809d`.
 
-GitHub API now confirms RubricTrace PR #1 was user-merged on 19 October, with current main `ab5c5be944de7b41037b06802b2599f3372693a1`. Corrected the top-level batch ledger; retained historical test/PR records. Actual inspection metadata: `delivery/rubrictrace-merge-check.json`. No RubricTrace repository writes were made. WebCrew still has no designated repository, and the next project still requires selection. These outstanding items do not change the existing sequence.
+## Actual hosted checks
 
-Status: **implementation delivered; real browser and local-model fixture verified; public-site integration and GitHub publication remain blocked/pending.** This is the delayed `2026-10-19-afternoon` release. Do not call it fully finished or production ready.
+- [Ordinary CI](https://github.com/oshada28nilendra-debug/webcrew/actions/runs/39435871875): **46 tests passed, zero skips per Python 3.11/3.12/3.13**, including actual Chromium. Lint/format/compile, isolated wheel build, baseline demo and Gitleaks passed. All three decoded job logs inspected.
+- [Public browser](https://github.com/oshada28nilendra-debug/webcrew/actions/runs/39435871737): real guarded HTTPS fetch of IANA's example-domain documentation, 6,774 HTML bytes, Chromium149.0.7827.55, exact documentation-purpose passage collected and observed again in a fresh context. Downloaded artifact12272790099 SHA256 `04900922ed26f77dae1ab66fff8919220e4bb65f7eb38dbd585a21e9042cc0f9` matched; actual report and passage/hash were inspected locally. Retained `delivery/github-public-browser/`.
+- [Real local-model CI](https://github.com/oshada28nilendra-debug/webcrew/actions/runs/39435871874): checksum-pinned llama.cppb11718 + official Qwen3-4B Q4_K_M CPU; **six actual calls, 4,933 prompt /62 completion tokens**, five actions, pause after two/resume, fresh-source review. Downloaded artifact12271625691 SHA256 `21dabd2220441e7d5a231bc1cb2e09a498fb25e4194da24d82401378c671a754` matched. Actual access/refund passages and hashes were recomputed locally against fresh observations. Retained `delivery/github-live-model/`. No paid API/key.
 
-## Executed locally
+Local full suite also passed46/46 with real headless-shell149.0.7827.55. Fresh lint/format, isolated wheel build and an installed-wheel CLI run from /tmp against gzip HTML passed. Prior40-test and model evidence is historical, retained in `VERIFICATION-HISTORY.md` and delivery/. The generic compatible HTTP adapter is real; simulated-provider tests remain distinct from these actual model calls.
 
-- Python 3.12.14: **40 tests passed, zero skips**, including real Chromium headless-shell 149.0.7827.55 navigation, fresh-context verification, changed-source refusal, pause/resume, cumulative budgets, forbidden navigation/redirect/meta-refresh blocking and proposed-write deferral. `delivery/tests.txt` is the actual output. Simulated planner/provider boundary tests are explicitly named; they are not live-model evidence.
-- Ruff 0.15.7 lint and format check, compileall and wheel build passed. Isolated wheel installation and actual installed CLI ran from `/tmp`, completed the fictional site task and exported two evidence records: `delivery/installed-cli.json`. The CLI child imported the installed wheel, not the source tree.
-- Independent review found two important issues and two related input defects. All four were reproduced RED→GREEN and the full suite rerun. Details in `REVIEW.md`.
-- Gitleaks 8.30.1, checksum-verified scanner, found no source-package credential leaks. Actual redacted report: `delivery/gitleaks.json`. This is a source scan, not an account-access audit or complete-security guarantee.
+## Failures retained and fixed
 
-Full Chrome could not launch here because its process-singleton Unix socket was denied. Official matching headless-shell worked without changing system permissions. Playwright's CDN initially returned a truncated error response; the official Chrome for Testing Google storage download succeeded. Browser binaries are not bundled.
+Initial hosted Python3.12/3.13 checks passed40tests but failed wheel creation without a global setuptools backend; build isolation fixed it. Initial public fetch returned gzip and was incorrectly decoded as raw UTF8. A real-browser regression failed before bounded gzip decoding was added; five decoder tests cover expansion, malformed/truncated/concatenated data, UTF8 and unsupported encoding. Independent focused review found no important issue.
 
-## Genuine model + browser workflow
+After gzip decoding, the Python homepage correctly failed the existing80-passage observation limit. The public smoke was narrowed to a shorter official IANA documentation page; limits were not relaxed. Earlier failed run IDs and reasons remain in `delivery/github-verification.json`. Earlier local weak/failed model attempts remain in `delivery/live-model-history.json`.
 
-`delivery/live-model-final/` retains the final run after review fixes:
+## Scope and limitations
 
-- Checksum-pinned llama.cpp **b11718**, official Qwen3-4B GGUF **Q4_K_M**, CPU. URLs/expected SHA256 are in `provenance.json` and the downloader.
-- **Six actual inference calls**: five planner choices and a separate outcome review; **4,933 prompt / 62 completion tokens**, no paid API or credential.
-- Finite action choices selected real allowed navigation/evidence operations. The workflow paused after two steps, resumed SQLite state, completed five actions and issued six permitted fixture GETs including independent source revisits. No tracker, purchase endpoint or POST reached the server.
-- Exact findings: “Step-free access is available at the east entrance.” and “Full refund is available until 48 hours before the workshop.” Both passages and text hashes were inspected and independently recomputed from the final report.
-- Separate semantic review accepted both criteria. This is one authored positive fixture, not a user study, injection benchmark, broad accuracy result or independent model-family ensemble.
+This verifies one authored workshop checklist with a real model and one real public documentation page. The no-model BFS/literal baseline also completes the workshop fixture in the same5actions and6GETs with zero inference; no model advantage or broad task accuracy demonstrated. The separate model verifier shares a model family with the planner. No production-security, injection-immunity, accessibility or user-study claim.
 
-Earlier attempts remain: attempt 1 selected an irrelevant passage and failed closed; attempt 2 prematurely finished and returned incomplete. Finite eligible action options narrowed the planner interface; attempt 3 and the final reviewed rerun succeeded. `delivery/live-model-history.json` records all four outcomes.
-
-## Simpler baseline
-
-No-model literal/BFS workflow independently succeeded on the identical fixture: five actions, six GETs, zero inference calls. The model did not improve this fixture's result or action count. `delivery/baseline-comparison.json` contains the actual comparison. This demonstrates bounded coordination/auditability, not a proven need for multiple agents.
-
-## Blocked or not executed
-
-- Actual `https://www.python.org/` attempt **failed closed at system DNS resolution** before fetching content. Failed checkpoint/report retained in `delivery/public-browser/`. Public HTTPS browser integration is **not verified here**. Local fictional HTTP/browser execution is verified separately.
-- No WebCrew repository designated: **no remote commit, push, PR, hosted CI or deployment**. Included ordinary/manual real-model workflows have not run remotely. Python 3.11/3.13 checks are configured but unexecuted here.
-- No paid remote model, login/authenticated profile, arbitrary dynamic controls, external write execution, accessibility audit, real-user benchmark or production-security review.
-
-Next: designate a repository, run included checks and `manual-public-browser-integration` there under working DNS/egress, and inspect actual evidence before upgrading completion status. `PYTHONPATH=. python scripts/public_smoke.py --out public-output` executes the same public check locally. Resume this source; do not rebuild it.
+Read-only HTML tasks only. Authenticated/dynamic apps and external write execution are out of scope; proposed writes stop without execution. Local DNS remains restricted, but the former public-integration blocker is resolved in hosted CI. Old no-repository/blocked notes are historical. PR review/merge remains the user's decision.

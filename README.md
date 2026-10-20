@@ -2,6 +2,8 @@
 
 **A small AI browser task team that shows its evidence before declaring success.**
 
+**Bounded release verified — [PR #1](https://github.com/oshada28nilendra-debug/webcrew/pull/1) is ready for review.** 46 tests per Python 3.11/3.12/3.13, real Chromium, public HTTPS and real local-model checks passed. See [actual results and limits](docs/VERIFICATION.md).
+
 WebCrew follows approved page links to complete a factual checklist, saves progress locally, and independently revisits the sources. Use it for public workshop policies, service eligibility details, or recurring information checks across a known set of pages.
 
 This first release supports **read-only HTML investigations**. It does not log in, submit forms, make purchases or control arbitrary applications. It is a focused, forkable implementation, not a claim to outperform general browser agents.
@@ -96,7 +98,7 @@ Exit codes: `0` verified; `3` paused/incomplete/failed/needs approval; `2` inval
 
 ## Boundaries and safeguards
 
-- At most 12 exact URLs, eight criteria, 24 actions and 32 model calls. Inputs at most 2 MB, HTML responses at most 1 MB, rendered observations at most 24 KB. Model output at most 512 tokens per call, 128 KB per HTTP response. No automatic retries.
+- At most 12 exact URLs, eight criteria, 24 actions and 32 model calls. Inputs at most 2 MB, HTML responses at most 1 MB both before and after gzip decoding, rendered observations at most 24 KB and 80 passages. Model output at most 512 tokens per call, 128 KB per HTTP response. No automatic retries.
 - Reviewed URLs require HTTPS, no credentials, query strings, fragments or encoded paths. Public DNS results are checked and one address is pinned per browser session. System DNS resolution itself is outside the HTTP deadline.
 - Only approved main-document GETs are fetched; redirects, subresources, service workers, scripts, downloads and arbitrary browser controls are unavailable. A fixed trusted DOM-reading script is used by Playwright; model-written scripts/selectors are never executed.
 - Any proposed write stops at `needs_approval` with an action/task digest. **Write execution is not implemented.** An approval file cannot enable it. GETs can cause side effects on badly designed sites: approve information pages only.
@@ -114,7 +116,7 @@ python -m compileall -q webcrew
 python -m build --wheel
 ```
 
-Browser tests are mandatory and fail if Chromium is unavailable; none silently substitutes a fake browser. Simulated model tests are named separately. See [verification](docs/VERIFICATION.md), [validation and alternatives](docs/VALIDATION.md), [design](docs/DESIGN.md), [handoff](docs/HANDOFF.md) and [security](SECURITY.md). Included GitHub workflows have not run remotely without a designated repository.
+Browser tests are mandatory and fail if Chromium is unavailable; none silently substitutes a fake browser. Simulated model tests are named separately. See [verification](docs/VERIFICATION.md), [validation and alternatives](docs/VALIDATION.md), [design](docs/DESIGN.md), [handoff](docs/HANDOFF.md) and [security](SECURITY.md). Actual hosted artifacts and the publication record are retained under `delivery/github-*`.
 
 ## Contributing
 

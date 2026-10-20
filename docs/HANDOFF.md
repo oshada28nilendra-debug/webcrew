@@ -1,16 +1,17 @@
-# Source handoff
+# Release handoff
 
-## Publication in progress — 20 October
+WebCrew's bounded read-only release is implemented, published and verified for delayed slot `2026-10-19-afternoon`.
 
-The user explicitly designated https://github.com/oshada28nilendra-debug/webcrew and asked to finish the project. Its main branch contained only a starter README. The existing reviewed implementation is being published on `feat/webcrew-first-release`. Public-browser and real local-model workflows now also run on pull requests, so their actual hosted results can resolve the former environment blockers. The records below describe the earlier archive handoff.
+- Repository: https://github.com/oshada28nilendra-debug/webcrew
+- Branch: `feat/webcrew-first-release`
+- Review: https://github.com/oshada28nilendra-debug/webcrew/pull/1 (open; never automatically merged)
+- Tested implementation: `2816d38f346f6b3a8a6f79ca4ae90a47517f809d`
+- Actual CI, public-browser and real-model evidence: [VERIFICATION.md](VERIFICATION.md) and [publication record](../delivery/github-verification.json).
 
-SQLite fixture checkpoints remain in the historical source archive; their complete JSON observation/event reports are published in this repository. Browser/model binaries are excluded.
+All 46 tests passed on Python 3.11, 3.12 and 3.13. Actual public HTTPS execution and six local-model inference calls passed their separate workflows. The earlier local DNS restriction was resolved through hosted CI. No paid model API or key was used.
 
-Approved slot: `2026-10-19-afternoon`, delivered late. No WebCrew repository was explicitly designated, so no repository creation, push, remote commit, PR, hosted CI or deployment was attempted.
+The workflow supports approved public HTML information tasks, persisted pause/resume and fresh evidence verification. It does not execute consequential writes, authenticate to websites or control dynamic applications. The simpler deterministic baseline also passed the authored fixture; no model advantage is established.
 
-Suggested repository (requires user designation): `oshada28nilendra-debug/webcrew`.
-Suggested isolated branch: `feat/webcrew-first-release`.
+User review and merge remain separate. Read the feature branch until merged. Earlier source ZIPs and `VERIFICATION-HISTORY.md` retain historical results; prefer this branch for current code. SQLite fixture checkpoints remain in the historical archive; full JSON observations/events are retained here. Browser/model binaries are excluded.
 
-After designation: inspect that repository's instructions, license, branches and existing work; import this reviewed source without replacing unrelated files; rerun CI and manual local-model workflow; review actual logs/artifacts; open a PR; never auto-merge. Preserve delivery evidence and distinguish future tests from this local handoff.
-
-The third 19 October slot remains pending explicit project selection. ExperimentCrew was a proposal only. CaptionGuard and StockSage were rejected and must not be implemented. All 27 slot identities remain in PROJECT_LEDGER.json; do not fill an earlier slot by rebuilding a delivered release.
+The third 19 October slot remains pending explicit project selection. ExperimentCrew was a proposal only. CaptionGuard and StockSage were rejected. All 27 slot identities remain in PROJECT_LEDGER.json.
