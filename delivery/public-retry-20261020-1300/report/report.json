@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "state": {
+    "schema": 1,
+    "status": "failed",
+    "steps": 0,
+    "calls": 0,
+    "visited": [],
+    "current": null,
+    "evidence": [],
+    "verification": null,
+    "pending": null,
+    "model_usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0
+    },
+    "mode": "baseline",
+    "reason": "Approved page DNS resolution failed"
+  },
+  "events": [
+    {
+      "type": "stopped",
+      "status": "failed",
+      "reason": "Approved page DNS resolution failed",
+      "timestamp": "2026-10-20T07:32:08.232827+00:00"
+    }
+  ],
+  "limitations": "Rendered text rechecked at observation time; not proof of truth or general task correctness. No external writes were executed."
+}

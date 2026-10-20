@@ -1,0 +1,76 @@
+{
+  "delivery_date": "2026-10-20",
+  "slot": "2026-10-19-afternoon",
+  "python": "3.12.14",
+  "tests": {
+    "passed": 40,
+    "skipped": 0,
+    "log": "delivery/tests.txt"
+  },
+  "lint": "passed",
+  "format": "passed",
+  "compile": "passed",
+  "wheel": "passed",
+  "installed_cli": "passed",
+  "browser": {
+    "version": "149.0.7827.55",
+    "kind": "official headless-shell",
+    "real_execution": true,
+    "fixture": "authored fictional workshop"
+  },
+  "live_model": {
+    "status": "verified",
+    "mode": "model",
+    "steps": 5,
+    "calls": 6,
+    "usage": {
+      "prompt_tokens": 4933,
+      "completion_tokens": 62
+    },
+    "requests": [
+      [
+        "GET",
+        "/"
+      ],
+      [
+        "GET",
+        "/access"
+      ],
+      [
+        "GET",
+        "/access"
+      ],
+      [
+        "GET",
+        "/refund"
+      ],
+      [
+        "GET",
+        "/access"
+      ],
+      [
+        "GET",
+        "/refund"
+      ]
+    ],
+    "pause_resume": true,
+    "fixture": "Authored fictional workshop; not a real website task benchmark",
+    "browser_version": "149.0.7827.55"
+  },
+  "public_browser": {
+    "verified": false,
+    "failure": "system DNS resolution failed",
+    "report": "delivery/public-browser/report/report.json"
+  },
+  "security_checks": {
+    "scanner": "gitleaks",
+    "version": "8.30.1",
+    "result": "passed",
+    "scope": "local source and fictional delivery evidence only"
+  },
+  "independent_review": "four findings fixed with red-green regressions; suite passed",
+  "repository": null,
+  "remote_ci_executed": false,
+  "paid_api_calls": 0,
+  "status": "implementation_delivered_live_model_verified_public_integration_blocked_publication_pending"
+}

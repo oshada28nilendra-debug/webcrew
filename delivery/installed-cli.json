@@ -1,0 +1,31 @@
+{
+  "exit_code": 0,
+  "stdout": "{\"status\": \"verified\", \"steps\": 5, \"calls\": 0, \"evidence_count\": 2, \"reason\": \"All literal criteria rechecked\", \"checkpoint\": \"/tmp/tmpjupxr71g/run.db\"}\n",
+  "stderr": "",
+  "installed_from": "dist/webcrew_local-0.1.0-py3-none-any.whl",
+  "cwd": "/tmp",
+  "result": "verified",
+  "evidence_count": 2,
+  "requests": [
+    [
+      "GET",
+      "/"
+    ],
+    [
+      "GET",
+      "/access"
+    ],
+    [
+      "GET",
+      "/refund"
+    ],
+    [
+      "GET",
+      "/access"
+    ],
+    [
+      "GET",
+      "/refund"
+    ]
+  ]
+}

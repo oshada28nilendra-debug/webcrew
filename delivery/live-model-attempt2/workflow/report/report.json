@@ -1,0 +1,350 @@
+{
+  "schema": 1,
+  "state": {
+    "schema": 1,
+    "status": "incomplete",
+    "steps": 3,
+    "calls": 3,
+    "visited": [
+      "http://127.0.0.1:39617/",
+      "http://127.0.0.1:39617/access"
+    ],
+    "current": {
+      "url": "http://127.0.0.1:39617/access",
+      "title": "Fictional workshop",
+      "passages": [
+        {
+          "id": "p0",
+          "text": "Venue access"
+        },
+        {
+          "id": "p1",
+          "text": "Step-free access is available at the east entrance."
+        },
+        {
+          "id": "p2",
+          "text": "Cancellation policy"
+        }
+      ],
+      "links": [
+        {
+          "id": "l1",
+          "url": "http://127.0.0.1:39617/refund",
+          "text": "Cancellation policy"
+        }
+      ],
+      "sha256": "8d2d6702254f6b662f4b2e00f4f157d9030609181948358b3912b2c0bb7efcad",
+      "html_sha256": "abe17cfed70d13420971bc1eaf696eb119f8f593dac5fe8967bab10a29f8f007",
+      "observed_at": "2026-10-20T03:41:43.878495+00:00",
+      "browser_version": "149.0.7827.55"
+    },
+    "evidence": [
+      {
+        "criterion": "access",
+        "text": "Step-free access is available at the east entrance.",
+        "url": "http://127.0.0.1:39617/access",
+        "source_sha256": "8d2d6702254f6b662f4b2e00f4f157d9030609181948358b3912b2c0bb7efcad",
+        "text_sha256": "235ebc9a26c55c409fb4fb08a73846c0e51161993da201d06ca8a87ba7922b66",
+        "passage": "p1"
+      }
+    ],
+    "verification": {
+      "passed": false,
+      "checks": [
+        {
+          "criterion": "access",
+          "passed": true,
+          "evidence": [
+            {
+              "criterion": "access",
+              "text": "Step-free access is available at the east entrance.",
+              "url": "http://127.0.0.1:39617/access",
+              "source_sha256": "8d2d6702254f6b662f4b2e00f4f157d9030609181948358b3912b2c0bb7efcad",
+              "text_sha256": "235ebc9a26c55c409fb4fb08a73846c0e51161993da201d06ca8a87ba7922b66",
+              "passage": "p1"
+            }
+          ],
+          "reason": "Exact passage observed again"
+        },
+        {
+          "criterion": "refund",
+          "passed": false,
+          "evidence": [],
+          "reason": "Missing, changed or unmatched evidence"
+        }
+      ],
+      "fresh_sources": {
+        "http://127.0.0.1:39617/access": {
+          "url": "http://127.0.0.1:39617/access",
+          "title": "Fictional workshop",
+          "passages": [
+            {
+              "id": "p0",
+              "text": "Venue access"
+            },
+            {
+              "id": "p1",
+              "text": "Step-free access is available at the east entrance."
+            },
+            {
+              "id": "p2",
+              "text": "Cancellation policy"
+            }
+          ],
+          "links": [
+            {
+              "id": "l0",
+              "url": "http://127.0.0.1:39617/refund",
+              "text": "Cancellation policy"
+            }
+          ],
+          "sha256": "8d2d6702254f6b662f4b2e00f4f157d9030609181948358b3912b2c0bb7efcad",
+          "html_sha256": "abe17cfed70d13420971bc1eaf696eb119f8f593dac5fe8967bab10a29f8f007",
+          "observed_at": "2026-10-20T03:41:52.215019+00:00",
+          "browser_version": "149.0.7827.55"
+        }
+      }
+    },
+    "pending": null,
+    "model_usage": {
+      "prompt_tokens": 2460,
+      "completion_tokens": 38
+    },
+    "mode": "model",
+    "frontier": [
+      {
+        "id": "l0",
+        "url": "http://127.0.0.1:39617/access",
+        "text": "Venue access"
+      },
+      {
+        "id": "l1",
+        "url": "http://127.0.0.1:39617/refund",
+        "text": "Cancellation policy"
+      }
+    ],
+    "reason": "Fresh evidence or semantic review did not satisfy the task"
+  },
+  "events": [
+    {
+      "type": "observation",
+      "snapshot": {
+        "url": "http://127.0.0.1:39617/",
+        "title": "Fictional workshop",
+        "passages": [
+          {
+            "id": "p0",
+            "text": "Community Workshop"
+          },
+          {
+            "id": "p1",
+            "text": "Find venue and cancellation policies."
+          },
+          {
+            "id": "p2",
+            "text": "Venue accessCancellation policyBuy ticket"
+          }
+        ],
+        "links": [
+          {
+            "id": "l0",
+            "url": "http://127.0.0.1:39617/access",
+            "text": "Venue access"
+          },
+          {
+            "id": "l1",
+            "url": "http://127.0.0.1:39617/refund",
+            "text": "Cancellation policy"
+          }
+        ],
+        "sha256": "6507432948dd9f0b74bb8ef6803932a171215f86be9c470e446e1e576207bcf0",
+        "html_sha256": "d2552254d0ec85a468bf8c44771272f460a8a0b9c708542ddaf92251ae491784",
+        "observed_at": "2026-10-20T03:41:17.732245+00:00",
+        "browser_version": "149.0.7827.55"
+      },
+      "timestamp": "2026-10-20T03:41:17.732274+00:00"
+    },
+    {
+      "type": "model_call_started",
+      "role": "planner",
+      "call": 1,
+      "timestamp": "2026-10-20T03:41:17.734461+00:00"
+    },
+    {
+      "type": "model_response",
+      "role": "planner",
+      "response": {
+        "action": "visit",
+        "link": "l0"
+      },
+      "timestamp": "2026-10-20T03:41:33.432273+00:00"
+    },
+    {
+      "type": "action_started",
+      "action": {
+        "action": "visit",
+        "link": "l0"
+      },
+      "timestamp": "2026-10-20T03:41:33.434402+00:00"
+    },
+    {
+      "type": "action_completed",
+      "action": {
+        "action": "visit",
+        "link": "l0"
+      },
+      "snapshot": {
+        "url": "http://127.0.0.1:39617/access",
+        "title": "Fictional workshop",
+        "passages": [
+          {
+            "id": "p0",
+            "text": "Venue access"
+          },
+          {
+            "id": "p1",
+            "text": "Step-free access is available at the east entrance."
+          },
+          {
+            "id": "p2",
+            "text": "Cancellation policy"
+          }
+        ],
+        "links": [
+          {
+            "id": "l1",
+            "url": "http://127.0.0.1:39617/refund",
+            "text": "Cancellation policy"
+          }
+        ],
+        "sha256": "8d2d6702254f6b662f4b2e00f4f157d9030609181948358b3912b2c0bb7efcad",
+        "html_sha256": "abe17cfed70d13420971bc1eaf696eb119f8f593dac5fe8967bab10a29f8f007",
+        "observed_at": "2026-10-20T03:41:33.480876+00:00",
+        "browser_version": "149.0.7827.55"
+      },
+      "timestamp": "2026-10-20T03:41:33.480901+00:00"
+    },
+    {
+      "type": "model_call_started",
+      "role": "planner",
+      "call": 2,
+      "timestamp": "2026-10-20T03:41:33.484954+00:00"
+    },
+    {
+      "type": "model_response",
+      "role": "planner",
+      "response": {
+        "action": "collect",
+        "selections": [
+          {
+            "criterion": "access",
+            "passage": "p1"
+          }
+        ]
+      },
+      "timestamp": "2026-10-20T03:41:43.335206+00:00"
+    },
+    {
+      "type": "action_started",
+      "action": {
+        "action": "collect",
+        "selections": [
+          {
+            "criterion": "access",
+            "passage": "p1"
+          }
+        ]
+      },
+      "timestamp": "2026-10-20T03:41:43.341317+00:00"
+    },
+    {
+      "type": "action_completed",
+      "action": {
+        "action": "collect",
+        "selections": [
+          {
+            "criterion": "access",
+            "passage": "p1"
+          }
+        ]
+      },
+      "snapshot": null,
+      "timestamp": "2026-10-20T03:41:43.343660+00:00"
+    },
+    {
+      "type": "stopped",
+      "status": "paused",
+      "reason": null,
+      "timestamp": "2026-10-20T03:41:43.375180+00:00"
+    },
+    {
+      "type": "observation",
+      "snapshot": {
+        "url": "http://127.0.0.1:39617/access",
+        "title": "Fictional workshop",
+        "passages": [
+          {
+            "id": "p0",
+            "text": "Venue access"
+          },
+          {
+            "id": "p1",
+            "text": "Step-free access is available at the east entrance."
+          },
+          {
+            "id": "p2",
+            "text": "Cancellation policy"
+          }
+        ],
+        "links": [
+          {
+            "id": "l1",
+            "url": "http://127.0.0.1:39617/refund",
+            "text": "Cancellation policy"
+          }
+        ],
+        "sha256": "8d2d6702254f6b662f4b2e00f4f157d9030609181948358b3912b2c0bb7efcad",
+        "html_sha256": "abe17cfed70d13420971bc1eaf696eb119f8f593dac5fe8967bab10a29f8f007",
+        "observed_at": "2026-10-20T03:41:43.878495+00:00",
+        "browser_version": "149.0.7827.55"
+      },
+      "timestamp": "2026-10-20T03:41:43.878656+00:00"
+    },
+    {
+      "type": "model_call_started",
+      "role": "planner",
+      "call": 3,
+      "timestamp": "2026-10-20T03:41:43.880789+00:00"
+    },
+    {
+      "type": "model_response",
+      "role": "planner",
+      "response": {
+        "action": "finish"
+      },
+      "timestamp": "2026-10-20T03:41:51.768309+00:00"
+    },
+    {
+      "type": "action_started",
+      "action": {
+        "action": "finish"
+      },
+      "timestamp": "2026-10-20T03:41:51.774733+00:00"
+    },
+    {
+      "type": "action_completed",
+      "action": {
+        "action": "finish"
+      },
+      "snapshot": null,
+      "timestamp": "2026-10-20T03:41:51.776070+00:00"
+    },
+    {
+      "type": "stopped",
+      "status": "incomplete",
+      "reason": "Fresh evidence or semantic review did not satisfy the task",
+      "timestamp": "2026-10-20T03:41:52.235093+00:00"
+    }
+  ],
+  "limitations": "Rendered text rechecked at observation time; not proof of truth or general task correctness. No external writes were executed."
+}

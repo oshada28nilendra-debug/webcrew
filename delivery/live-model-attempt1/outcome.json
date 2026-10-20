@@ -1,0 +1,27 @@
+{
+  "attempt": "live-model-attempt1",
+  "status": "failed",
+  "reason": "Selected passage fails the literal acceptance check",
+  "steps": 1,
+  "calls": 1,
+  "usage": {
+    "prompt_tokens": 712,
+    "completion_tokens": 21
+  },
+  "responses": [
+    {
+      "type": "model_response",
+      "role": "planner",
+      "response": {
+        "action": "collect",
+        "selections": [
+          {
+            "criterion": "access",
+            "passage": "p2"
+          }
+        ]
+      },
+      "timestamp": "2026-10-20T03:39:59.415638+00:00"
+    }
+  ]
+}

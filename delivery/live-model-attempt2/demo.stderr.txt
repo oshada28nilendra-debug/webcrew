@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/1e12a4453378/webcrew/scripts/demo.py", line 53, in <module>
+    main()
+  File "/workspace/scratch/1e12a4453378/webcrew/scripts/demo.py", line 49, in main
+    raise RuntimeError("Demo did not meet outcome/network gates")
+RuntimeError: Demo did not meet outcome/network gates

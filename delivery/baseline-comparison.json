@@ -1,0 +1,82 @@
+{
+  "fixture": "One authored fictional three-page workshop checklist; no accuracy benchmark",
+  "baseline": {
+    "status": "verified",
+    "mode": "baseline",
+    "steps": 5,
+    "calls": 0,
+    "usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0
+    },
+    "requests": [
+      [
+        "GET",
+        "/"
+      ],
+      [
+        "GET",
+        "/access"
+      ],
+      [
+        "GET",
+        "/access"
+      ],
+      [
+        "GET",
+        "/refund"
+      ],
+      [
+        "GET",
+        "/access"
+      ],
+      [
+        "GET",
+        "/refund"
+      ]
+    ],
+    "pause_resume": true,
+    "fixture": "Authored fictional workshop; not a real website task benchmark",
+    "browser_version": "149.0.7827.55"
+  },
+  "model_team": {
+    "status": "verified",
+    "mode": "model",
+    "steps": 5,
+    "calls": 6,
+    "usage": {
+      "prompt_tokens": 4933,
+      "completion_tokens": 62
+    },
+    "requests": [
+      [
+        "GET",
+        "/"
+      ],
+      [
+        "GET",
+        "/access"
+      ],
+      [
+        "GET",
+        "/access"
+      ],
+      [
+        "GET",
+        "/refund"
+      ],
+      [
+        "GET",
+        "/access"
+      ],
+      [
+        "GET",
+        "/refund"
+      ]
+    ],
+    "pause_resume": true,
+    "fixture": "Authored fictional workshop; not a real website task benchmark",
+    "browser_version": "149.0.7827.55"
+  },
+  "assessment": "Both verified the same two passages in five actions and six permitted GETs; the model used six inference calls. No advantage over the baseline demonstrated."
+}

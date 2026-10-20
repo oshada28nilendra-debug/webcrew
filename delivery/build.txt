@@ -1,0 +1,64 @@
+* Getting build dependencies for wheel...
+running egg_info
+writing webcrew_local.egg-info/PKG-INFO
+writing dependency_links to webcrew_local.egg-info/dependency_links.txt
+writing entry points to webcrew_local.egg-info/entry_points.txt
+writing requirements to webcrew_local.egg-info/requires.txt
+writing top-level names to webcrew_local.egg-info/top_level.txt
+reading manifest file 'webcrew_local.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'webcrew_local.egg-info/SOURCES.txt'
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+copying webcrew/browser.py -> build/lib/webcrew
+running egg_info
+writing webcrew_local.egg-info/PKG-INFO
+writing dependency_links to webcrew_local.egg-info/dependency_links.txt
+writing entry points to webcrew_local.egg-info/entry_points.txt
+writing requirements to webcrew_local.egg-info/requires.txt
+writing top-level names to webcrew_local.egg-info/top_level.txt
+reading manifest file 'webcrew_local.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'webcrew_local.egg-info/SOURCES.txt'
+installing to build/bdist.linux-x86_64/wheel
+running install
+running install_lib
+creating build/bdist.linux-x86_64/wheel
+creating build/bdist.linux-x86_64/wheel/webcrew
+copying build/lib/webcrew/provider.py -> build/bdist.linux-x86_64/wheel/./webcrew
+copying build/lib/webcrew/httpio.py -> build/bdist.linux-x86_64/wheel/./webcrew
+copying build/lib/webcrew/runner.py -> build/bdist.linux-x86_64/wheel/./webcrew
+copying build/lib/webcrew/browser.py -> build/bdist.linux-x86_64/wheel/./webcrew
+copying build/lib/webcrew/__init__.py -> build/bdist.linux-x86_64/wheel/./webcrew
+copying build/lib/webcrew/cli.py -> build/bdist.linux-x86_64/wheel/./webcrew
+copying build/lib/webcrew/__main__.py -> build/bdist.linux-x86_64/wheel/./webcrew
+copying build/lib/webcrew/files.py -> build/bdist.linux-x86_64/wheel/./webcrew
+copying build/lib/webcrew/state.py -> build/bdist.linux-x86_64/wheel/./webcrew
+copying build/lib/webcrew/core.py -> build/bdist.linux-x86_64/wheel/./webcrew
+copying build/lib/webcrew/report.py -> build/bdist.linux-x86_64/wheel/./webcrew
+running install_egg_info
+Copying webcrew_local.egg-info to build/bdist.linux-x86_64/wheel/./webcrew_local-0.1.0-py3.12.egg-info
+running install_scripts
+creating build/bdist.linux-x86_64/wheel/webcrew_local-0.1.0.dist-info/WHEEL
+creating '/workspace/scratch/1e12a4453378/webcrew/dist/.tmp-rygf_q2a/webcrew_local-0.1.0-py3-none-any.whl' and adding 'build/bdist.linux-x86_64/wheel' to it
+adding 'webcrew/__init__.py'
+adding 'webcrew/__main__.py'
+adding 'webcrew/browser.py'
+adding 'webcrew/cli.py'
+adding 'webcrew/core.py'
+adding 'webcrew/files.py'
+adding 'webcrew/httpio.py'
+adding 'webcrew/provider.py'
+adding 'webcrew/report.py'
+adding 'webcrew/runner.py'
+adding 'webcrew/state.py'
+adding 'webcrew_local-0.1.0.dist-info/licenses/LICENSE'
+adding 'webcrew_local-0.1.0.dist-info/METADATA'
+adding 'webcrew_local-0.1.0.dist-info/WHEEL'
+adding 'webcrew_local-0.1.0.dist-info/entry_points.txt'
+adding 'webcrew_local-0.1.0.dist-info/top_level.txt'
+adding 'webcrew_local-0.1.0.dist-info/RECORD'
+removing build/bdist.linux-x86_64/wheel
+Successfully built webcrew_local-0.1.0-py3-none-any.whl
