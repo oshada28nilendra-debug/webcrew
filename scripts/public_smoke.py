@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 from urllib.parse import urlsplit
 
-from webcrew.browser import resolve, _NavigationPolicy
+from webcrew.browser import resolve, decode_html, _NavigationPolicy
 from webcrew.core import Error, Task
 from webcrew.httpio import DeadlineHTTP, read_exchange
 from webcrew.report import export
@@ -54,6 +54,9 @@ def main():
             bytes=len(body),
             sha256=hashlib.sha256(body).hexdigest(),
         )
+        diagnostic["encoding"] = headers.get("content-encoding", "identity")
+        body = decode_html(body, headers)
+        diagnostic["decoded_bytes"] = len(body)
         parser = _NavigationPolicy()
         parser.feed(body.decode("utf-8"))
         parser.close()

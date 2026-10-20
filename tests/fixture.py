@@ -16,6 +16,18 @@ class Site:
 
             def do_GET(self):
                 site.requests.append(("GET", self.path))
+                if self.path == "/gzip":
+                    import gzip
+
+                    payload = gzip.compress(
+                        b"<html><body><p>Step-free access is available.</p></body></html>"
+                    )
+                    self.send_response(200)
+                    self.send_header("Content-Type", "text/html; charset=utf-8")
+                    self.send_header("Content-Encoding", "gzip")
+                    self.end_headers()
+                    self.wfile.write(payload)
+                    return
                 if self.path == "/redirect":
                     self.send_response(302)
                     self.send_header("Location", "/write")

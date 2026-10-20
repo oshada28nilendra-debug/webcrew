@@ -3,6 +3,7 @@
 import ipaddress
 import os
 import socket
+import zlib
 from html.parser import HTMLParser
 from datetime import datetime, timezone
 from urllib.parse import urlsplit
@@ -12,6 +13,25 @@ from playwright.sync_api import sync_playwright
 
 from .core import Error, digest
 from .httpio import DeadlineHTTP, read_exchange
+
+
+def decode_html(body, headers, max_bytes=1_000_000):
+    """Decode supported wire content with the same compressed/expanded byte limit."""
+    if len(body) > max_bytes:
+        raise Error("HTML response exceeds byte budget")
+    encoding = headers.get("content-encoding", "identity").strip().lower()
+    try:
+        if encoding == "gzip":
+            decoder = zlib.decompressobj(16 + zlib.MAX_WBITS)
+            body = decoder.decompress(body, max_bytes + 1)
+            if len(body) > max_bytes or not decoder.eof or decoder.unused_data:
+                raise Error("Gzip HTML is oversized, truncated or has trailing data")
+        elif encoding not in {"identity", ""}:
+            raise Error("Unsupported HTML content encoding")
+        body.decode("utf-8")
+        return body
+    except (zlib.error, UnicodeError):
+        raise Error("Malformed encoded UTF-8 HTML") from None
 
 
 class _NavigationPolicy(HTMLParser):
@@ -111,6 +131,7 @@ class Browser:
                 raise Error(
                     "Page must return HTTP 200 HTML; redirects and downloads are unsupported"
                 )
+            body = decode_html(body, headers)
             html_text = body.decode("utf-8")
             parser = _NavigationPolicy()
             parser.feed(html_text)

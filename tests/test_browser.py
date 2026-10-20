@@ -25,6 +25,14 @@ class ScriptedPlanner:
 
 
 class BrowserTests(unittest.TestCase):
+    def test_real_browser_can_observe_bounded_gzip_html(self):
+        with Site() as site:
+            data = site.task()
+            data["allowed_urls"].append(site.base + "/gzip")
+            with Browser(Task.parse(data, demo=True)) as browser:
+                snapshot = browser.read(site.base + "/gzip")
+                self.assertEqual(snapshot["passages"][0]["text"], "Step-free access is available.")
+
     def test_meta_refresh_cannot_misattribute_evidence(self):
         with Site() as site:
             data = site.task()
